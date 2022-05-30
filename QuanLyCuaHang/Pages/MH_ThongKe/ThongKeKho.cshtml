@@ -1,0 +1,34 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_ThongKe.ThongKeKhoModel
+@using Entities
+@{
+}
+
+<h1>Thống kê Số lượng Hàng trong kho</h1>
+<br />
+<div>Hôm nay là ngày: <b>@DateTime.Today.ToShortDateString()</b></div>
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Mã Mặt Hàng</th>
+            <th>Tên Mặt Hàng</th>
+            <th>Hạn Sử Dụng</th>
+            <th>Số lượng tồn kho</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.dsMH.Count; i++)
+        {
+            <tr>
+                <td>#@(i+1)</td>
+                <td>@Model.dsMH[i].MaMatHang</td>
+                <td>@Model.dsMH[i].TenMatHang</td>
+                <td>@Model.dsMH[i].HanSuDung</td>
+                <td>@Model.SoLuongTonKho[i]</td>
+            </tr>
+        }
+    </tbody>
+</table>

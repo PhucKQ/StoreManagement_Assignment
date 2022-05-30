@@ -1,0 +1,44 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_HoaDonNhap.SuaHoaDonNhapModel
+@{
+}
+
+<h1>Sửa thông tin Hóa Đơn Nhập hàng</h1>
+@if (Model.coDuLieu)
+{
+<form method="post">
+    <div class="row my-2">
+        <div class="col-4">
+            <label>Tên Mặt Hàng</label>
+            @*<input class="form-control" name="TenMH" value="@Model.thongTinHD.TenMatHang"/>*@
+            <select class="form-control" name="TenMH">
+                <option value="@Model.thongTinHD.TenMatHang">@Model.thongTinHD.TenMatHang</option>
+                @foreach (string item in Model.dsTenMH)
+                {
+                    <option value="@item">@item</option>
+                }
+            </select>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-4">
+            <label>Ngày Tạo (dd/mm/yyyy)</label>
+            <input class="form-control" name="NgayTao" value="@Model.thongTinHD.NgayTao"/>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-4">
+            <label>Số Lượng</label>
+            <input class="form-control" name="SoLuong" value="@Model.thongTinHD.SoLuong"/>
+        </div>
+    </div>
+    <br />
+
+    <button class="btn btn-success">Xác nhận</button>
+    <a class="btn btn-dark" href="./DanhSachHoaDonNhap">Hủy</a>
+</form>
+}
+else 
+{
+    <div class="text-danger">@Model.Chuoi</div>
+}

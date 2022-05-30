@@ -1,0 +1,67 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_MatHang.DanhSachMHModel
+@using Entities
+@{
+}
+
+<h1>Danh sách Mặt Hàng</h1>
+<br />
+
+<a href="/MH_MatHang/TaoMoiMH" style="text-decoration: none;">
+    <h6>Thêm mới Mặt Hàng</h6>
+</a>
+<br />
+
+<div>
+    <form method="post">
+        <div class="input-group">
+            <input type="text" name="TuKhoa" class="form-control" placeholder="nhập từ khóa">
+            <div class="input-group-append">
+                <button class="btn btn-info" type="submit">Tìm kiếm</button>
+            </div>
+        </div>
+    </form>
+</div>
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Mã Mặt Hàng</th>
+            <th>Tên Mặt Hàng</th>
+            <th>Cty Sản Xuất</th>
+            <th>Hạn Sử Dụng</th>
+            <th>Ngày Sản Xuất</th>
+            <th>Loại Hàng</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (MatHang eachItem in Model.dsMH)
+        {
+        <tr>
+            <td>#@(Model.dsMH.IndexOf(eachItem) + 1)</td>
+            <td>@eachItem.MaMatHang</td>
+            <td>@eachItem.TenMatHang</td>
+            <td>@eachItem.CtySanXuat</td>
+            <td>@eachItem.HanSuDung</td>
+            <td>@eachItem.NgaySanXuat</td>
+            <td>
+                @foreach (LoaiHang lh in Model.dsLH)
+                {
+                    if(lh.MaLoaiHang == eachItem.MaLoaiHang)
+                    {
+                        @lh.TenLoaiHang
+                    }
+                }
+            </td>
+            <td>
+                <a href="/MH_MatHang/SuaMH?MaMH=@eachItem.MaMatHang">Sửa</a>
+                |
+                <a href="/MH_MatHang/XoaMH?MaMH=@eachItem.MaMatHang">Xóa</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

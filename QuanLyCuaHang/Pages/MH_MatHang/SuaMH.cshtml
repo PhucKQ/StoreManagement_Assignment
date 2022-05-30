@@ -1,0 +1,62 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_MatHang.SuaMHModel
+@using Entities
+@{
+}
+
+<h1>Sửa thông tin Mặt Hàng</h1>
+@if (Model.coSanPham)
+{
+<form method="post" class="form-group">
+    <div class="row">
+        <div class="col-4 my-3">
+            <label for="TenMH">Tên Mặt Hàng</label>
+            <input type="text" name="TenMH" class="form-control" value="@Model.thongTinMH.TenMatHang" />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-4 my-3">
+            <label for="Cty">Cty Sản Xuất</label>
+            <input type="text" name="Cty" class="form-control" value="@Model.thongTinMH.CtySanXuat   " />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-4 my-3">
+            <label for="HSD">Hạn sử dụng (dd/mm/yyyy)</label>
+            <input type="text" name="HSD" class="form-control" value="@Model.thongTinMH.HanSuDung" />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-4 my-3">
+            <label for="NSX">Ngày sản xuất (dd/mm/yyyy)</label>
+            <input type="text" name="NSX" class="form-control" value="@Model.thongTinMH.NgaySanXuat" />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-4 my-3">
+            <label for="LH">Tên Loại Hàng</label>
+            <select name="LH" class="form-control">
+                <option value="@Model.thongTinMH.MaLoaiHang">@Model.TenLH</option>
+                @foreach (LoaiHang eachItem in Model.dsLH)
+                {
+                    <option value="@eachItem.MaLoaiHang">@eachItem.TenLoaiHang</option>
+                }
+            </select>
+        </div>
+    </div>
+    <br />
+    <div>
+        <button type="submit" class="btn btn-success">Xác nhận</button>
+        <a href="/MH_MatHang/DanhSachMH" class="btn btn-dark">Hủy</a>
+    </div>
+</form>
+}
+else
+{
+    <div style="color: red;">@Model.Chuoi</div>
+}
+

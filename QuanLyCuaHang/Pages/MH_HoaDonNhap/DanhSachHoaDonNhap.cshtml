@@ -1,0 +1,52 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_HoaDonNhap.DanhSachHoaDonNhapModel
+@using Entities
+@{
+}
+
+<h1>Danh sách Hóa Đơn Nhập hàng</h1>
+<br />
+<a href="/MH_HoaDonNhap/TaoMoiHoaDonNhap" style="text-decoration: none;"><h6>Thêm mới Hóa Đơn Nhập hàng</h6></a>
+<br />
+
+<div>
+    <form method="post">
+        <div class="input-group">
+            <input type="text" name="TuKhoa" class="form-control" placeholder="nhập từ khóa">
+            <div class="input-group-append">
+                <button class="btn btn-info" type="submit">Tìm kiếm</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Mã Hóa Đơn</th>
+            <th>Tên Mặt Hàng</th>
+            <th>Ngày Tạo</th>
+            <th>Số Lượng</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (HoaDon eachItem in Model.dsHD)
+        {
+        <tr>
+            <td>#@(Model.dsHD.IndexOf(eachItem) + 1)</td>
+            <td>@eachItem.MaHoaDon</td>
+            <td>@eachItem.TenMatHang</td>
+            <td>@eachItem.NgayTao</td>
+            <td>@eachItem.SoLuong</td>
+            <td>
+                <a href="./SuaHoaDonNhap?MaHD=@eachItem.MaHoaDon">Sửa</a>
+                |
+                <a href="./XoaHoaDonNhap?MaHD=@eachItem.MaHoaDon">Xóa</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,15 @@
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\bin\Debug\net5.0\DAL.deps.json
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\bin\Debug\net5.0\DAL.dll
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\bin\Debug\net5.0\ref\DAL.dll
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\bin\Debug\net5.0\DAL.pdb
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\bin\Debug\net5.0\Entities.dll
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\bin\Debug\net5.0\Entities.pdb
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\obj\Debug\net5.0\DAL.csproj.AssemblyReference.cache
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\obj\Debug\net5.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\obj\Debug\net5.0\DAL.AssemblyInfoInputs.cache
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\obj\Debug\net5.0\DAL.AssemblyInfo.cs
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\obj\Debug\net5.0\DAL.csproj.CoreCompileInputs.cache
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\obj\Debug\net5.0\DAL.csproj.CopyComplete
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\obj\Debug\net5.0\DAL.dll
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\obj\Debug\net5.0\ref\DAL.dll
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\DAL\obj\Debug\net5.0\DAL.pdb

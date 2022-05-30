@@ -1,0 +1,29 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_LoaiHang.SuaLHModel
+@{
+}
+
+@if (Model.coSanPham)
+{
+    <h1>Sửa thông tin Loại Hàng</h1>
+    <form method="post" class="form-group">
+        <div class="row my-3">
+            <div class="col-4">
+                <label for="TenLH" class="form-group">Tên Loại Hàng</label>
+                <input type="text" name="TenLH" class="form-control" value="@Model.loaiHang.TenLoaiHang" />
+            </div>
+        </div>
+        <br />
+
+        <div>
+            <button type="submit" class="btn btn-success">Xác nhận</button>
+            <a href="/MH_LoaiHang/DanhSachLH" class="btn btn-dark">Hủy</a>
+        </div>
+    </form>
+}
+else 
+{
+    <div style="color: red;">
+        @Model.Chuoi
+    </div>
+}

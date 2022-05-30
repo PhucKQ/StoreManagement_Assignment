@@ -1,0 +1,37 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_HoaDonNhap.XoaHoaDonNhapModel
+@{
+}
+
+<h1>Xóa Hóa Đơn Nhập hàng</h1>
+<br />
+@if (Model.coDuLieu)
+{
+    <div>Bạn có muốn <b>xóa</b> Hóa Đơn Nhập hàng có mã <b>@Model.thongTinHD.MaHoaDon</b>?</div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã Hóa Đơn</th>
+                <th>Tên Mặt Hàng</th>
+                <th>Ngày Tạo Hóa Đơn</th>
+                <th>Số Lượng</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.thongTinHD.MaHoaDon</td>
+                <td>@Model.thongTinHD.TenMatHang</td>
+                <td>@Model.thongTinHD.NgayTao</td>
+                <td>@Model.thongTinHD.SoLuong</td>
+            </tr>
+        </tbody>
+    </table>
+    <form method="post" class="text-right">
+        <button class="btn btn-danger">Xác nhận</button>
+        <a class="btn btn-dark" href="./DanhSachHoaDonNhap">Hủy</a>
+    </form>
+}
+else
+{
+    <div class="text-danger">@Model.Chuoi</div>
+}

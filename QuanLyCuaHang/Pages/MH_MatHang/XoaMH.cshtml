@@ -1,0 +1,50 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_MatHang.XoaMHModel
+@{
+}
+
+@if (Model.coSanPham)
+{
+    <h1>Xóa Mặt Hàng</h1>
+    <h5>Bạn có muốn xóa "@Model.matHang.TenMatHang"</h5>
+    <br />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã Mặt Hàng</th>
+                <th>Tên Mặt Hàng</th>
+                <th>Cty sản xuất</th>
+                <th>Hạn sử dụng</th>
+                <th>Ngày sản xuất</th>
+                <th>Loại hàng</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.matHang.MaMatHang</td>
+                <td>@Model.matHang.TenMatHang</td>
+                <td>@Model.matHang.CtySanXuat</td>
+                <td>@Model.matHang.HanSuDung</td>
+                <td>@Model.matHang.NgaySanXuat</td>
+                <td>
+                    @foreach (var item in Model.dsLH)
+                    {
+                        if (item.MaLoaiHang == Model.matHang.MaLoaiHang)
+                        {
+                            @item.TenLoaiHang
+                        }
+                    }
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <form method="post">
+        <button type="submit" class="btn btn-danger">Xác nhận</button>
+        <a href="/MH_MatHang/DanhSachMH" class="btn btn-dark">Hủy</a>
+    </form>
+}
+else
+{
+    <div style="color: red;">@Model.Chuoi</div>
+}

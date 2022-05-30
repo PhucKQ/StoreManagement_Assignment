@@ -1,0 +1,57 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_MatHang.TaoMoiMHModel
+@using Entities;
+@{
+}
+
+<h1>Tạo mới Mặt Hàng</h1>
+<form method="post" class="form-group">
+    <div class="row my-3">
+        <div class="col-4">
+            <label for="TenMH">Mã Mặt Hàng</label>
+            <input type="text" name="MaMH" class="form-control" />
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-4">
+            <label for="TenMH">Tên Mặt Hàng</label>
+            <input type="text" name="TenMH" class="form-control" />
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-4">
+            <label for="Cty">Cty Sản Xuất</label>
+            <input type="text" name="Cty" class="form-control" />
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-4">
+            <label for="HSD">Hạn Sử Dụng (dd/mm/yyyy)</label>
+            <input type="text" name="HSD" class="form-control" />
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-4">
+            <label for="NSX">Ngày Sản Xuất (dd/mm/yyyy)</label>
+            <input type="text" name="NSX" class="form-control" />
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-4">
+            <label for="LH">Loại Hàng</label>
+            <select name="LH" class="form-control">
+                <option value="">Chọn Loại Hàng</option>
+                @foreach (LoaiHang lh in Model.dsLH)
+                {
+                    <option value="@lh.MaLoaiHang">@lh.TenLoaiHang</option>
+                }
+            </select>
+        </div>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Tạo mới</button>
+    <a href="/MH_MatHang/DanhSachMH" class="btn btn-dark">Hủy</a>
+</form>
+<div style="color: red;">
+    @Model.Chuoi
+</div>

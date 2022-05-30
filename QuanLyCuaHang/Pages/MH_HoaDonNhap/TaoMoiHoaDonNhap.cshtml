@@ -1,0 +1,47 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_HoaDonNhap.TaoMoiHoaDonNhapModel
+@using Entities
+@{
+}
+
+<h1>Tạo mới Hóa Đơn Nhập hàng</h1>
+<br />
+<form method="post">
+    <div class="row my-2">
+        <div class="col-4">
+            <label>Mã Hóa Đơn</label>
+            <input type="text" class="form-control" name="MaHD" />
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-4">
+            <label>Tên Mặt Hàng</label>
+            <select name="TenMH" class="form-control">
+                <option value="">Chọn Mặt Hàng</option>
+                @foreach (MatHang item in Model.dsMH)
+                {
+                    <option value="@item.TenMatHang">@item.TenMatHang</option>
+                }
+            </select>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-4">
+            <label>Ngày Tạo (dd/mm/yyyy)</label>
+            <input type="text" class="form-control" name="NgayTao" />
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-4">
+            <label>Số Lượng</label>
+            <input type="text" class="form-control" name="SoLuong" />
+        </div>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Xác nhận</button>
+    <a href="./DanhSachHoaDonNhap" class="btn btn-dark">Hủy</a>
+</form>
+<br />
+<div class="text-danger">
+    @Model.Chuoi
+</div>

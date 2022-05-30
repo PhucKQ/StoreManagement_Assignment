@@ -1,0 +1,73 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_LoaiHang.XoaLHModel
+@using Entities
+@{
+}
+
+@if (Model.coSanPham)
+{
+    <h1>Xóa Loại Hàng</h1>
+    <br />
+    <h5>Bạn có muốn xóa "Loại Hàng" có mã là "@Model.truyXuatLH.MaLoaiHang"</h5>
+    <br />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã Loại Hàng</th>
+                <th>Tên Loại Hàng</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.truyXuatLH.MaLoaiHang</td>
+                <td>@Model.truyXuatLH.TenLoaiHang</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+
+    @if (Model.dsMHLienQuan.Count > 0)
+    {
+        <div>Xóa "Loại hàng" <b>@Model.truyXuatLH.TenLoaiHang</b> sẽ <b>xóa luôn</b> các <b>Mặt hàng liên quan</b> gồm:</div>
+        <br />
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Mã Mặt Hàng</th>
+                    <th>Tên Mặt Hàng</th>
+                    <th>Loại Hàng</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (MatHang item in Model.dsMHLienQuan)
+                {
+                    <tr>
+                        <td>@item.MaMatHang</td>
+                        <td>@item.TenMatHang</td>
+                        <td>
+                            @foreach (LoaiHang lh in Model.dsLH)
+                            {
+                                if (lh.MaLoaiHang == item.MaLoaiHang)
+                                {
+                                    @lh.TenLoaiHang
+                                }
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    <br />
+
+    <form method="post">
+        <button type="submit" class="btn btn-danger">Xác nhận</button>
+        <a href="/MH_LoaiHang/DanhSachLH" class="btn btn-dark">Hủy</a>
+    </form>
+}
+else
+{
+    <div style="color: red;">@Model.Chuoi</div>
+}
+
+

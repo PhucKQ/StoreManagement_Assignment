@@ -1,0 +1,17 @@
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\obj\Debug\net5.0\Services.csproj.AssemblyReference.cache
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\obj\Debug\net5.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\obj\Debug\net5.0\Services.AssemblyInfoInputs.cache
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\obj\Debug\net5.0\Services.AssemblyInfo.cs
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\obj\Debug\net5.0\Services.csproj.CoreCompileInputs.cache
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\bin\Debug\net5.0\Services.deps.json
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\bin\Debug\net5.0\Services.dll
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\bin\Debug\net5.0\ref\Services.dll
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\bin\Debug\net5.0\Services.pdb
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\bin\Debug\net5.0\DAL.dll
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\bin\Debug\net5.0\Entities.dll
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\bin\Debug\net5.0\DAL.pdb
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\bin\Debug\net5.0\Entities.pdb
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\obj\Debug\net5.0\Services.csproj.CopyComplete
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\obj\Debug\net5.0\Services.dll
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\obj\Debug\net5.0\ref\Services.dll
+G:\DoAn_LTHDT_2021_12\QuanLyCuaHang\Services\obj\Debug\net5.0\Services.pdb

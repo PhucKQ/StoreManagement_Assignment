@@ -1,0 +1,27 @@
+﻿@page
+
+@model QuanLyCuaHang.Pages.MH_LoaiHang.TaoMoiLHModel
+@{
+}
+
+<h1>Tạo mới Loại Hàng</h1>
+<form method="post" class="form-group">
+    <div class="row my-3">
+        <div class="col-4">
+            <label for="TenLH">Mã Loại Hàng</label>
+            <input type="text" name="MaLH" class="form-control" />
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-4">
+            <label for="TenLH">Tên Loại Hàng</label>
+            <input type="text" name="TenLH" class="form-control" />
+        </div>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-success">Tạo mới</button>
+    <a href="/MH_LoaiHang/DanhSachLH" class="btn btn-dark">Hủy</a>
+</form>
+<div style="color: red;">@Model.Chuoi</div>
+

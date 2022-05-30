@@ -1,0 +1,40 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_ThongKe.ThongKeHSDModel
+@{
+}
+
+<h1>Thống kê Hàng hết Hạn Sử Dụng</h1>
+<br />
+<div>Hôm nay là ngày: <b>@DateTime.Today.ToShortDateString()</b></div>
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Mã Mặt Hàng</th>
+            <th>Tên Mặt Hàng</th>
+            <th>Hạn Sử Dụng</th>
+            <th>Tình trạng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.dsMH.Count; i++)
+        {
+            <tr>
+                <td>#@(i+1)</td>
+                <td>@Model.dsMH[i].MaMatHang</td>
+                <td>@Model.dsMH[i].TenMatHang</td>
+                <td>@Model.dsMH[i].HanSuDung</td>
+                @if (Model.daHetHanSuDung[i])
+                {
+                    <td><div style="color: red;">Đã hết HSD</div></td>
+                }
+                else
+                {
+                    <td><div style="color: green;">Chưa hết HSD</div></td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

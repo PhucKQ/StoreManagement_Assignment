@@ -1,0 +1,49 @@
+﻿@page
+@model QuanLyCuaHang.Pages.MH_LoaiHang.DanhSachLHModel
+@using Entities;
+@{
+}
+
+<h1>Danh sách Loại Hàng</h1>
+<br />
+<a href="/MH_LoaiHang/TaoMoiLH" style="text-decoration: none;"><h6>Thêm mới Loại Hàng</h6></a>
+<br />
+
+<div>
+    <form method="post">
+        <div class="input-group">
+            <input type="text" name="TuKhoa" class="form-control" placeholder="nhập từ khóa">
+            <div class="input-group-append">
+                <button class="btn btn-info" type="submit">Tìm kiếm</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Mã Loại Hàng</th>
+            <th>Tên Loại Hàng</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(LoaiHang eachItem in Model.dsLH)
+         {
+        <tr>
+            <td>#@(Model.dsLH.IndexOf(eachItem) + 1)</td>
+            <td>@eachItem.MaLoaiHang</td>
+            <td>@eachItem.TenLoaiHang</td>
+            <td>
+                <a href="/MH_LoaiHang/SuaLH?MaLH=@eachItem.MaLoaiHang">Sửa</a>
+                |
+                <a href="/MH_LoaiHang/XoaLH?MaLH=@eachItem.MaLoaiHang">Xóa</a>
+            </td>
+        </tr>
+         }
+    </tbody>
+</table>
